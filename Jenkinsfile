@@ -7,11 +7,13 @@ pipeline {
       }
     }
 
-    stage('build') {
-      steps {
-        sh 'scripts/build.sh'
-      }
-    }
+
+    stage('Who am I') {
+        steps {
+            sh 'whoami'
+            }
+        }
+
 
     stage('test') {
       steps {
