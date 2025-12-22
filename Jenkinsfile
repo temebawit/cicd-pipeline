@@ -8,11 +8,11 @@ pipeline {
     }
 
 
-    stage('Who am I') {
-        steps {
-            sh 'whoami'
-            }
-        }
+   stage('build') {
+      steps {
+        sh 'scripts/build.sh'
+      }
+    }
 
 
     stage('test') {
