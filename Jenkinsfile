@@ -1,11 +1,11 @@
 pipeline {
   agent any
   stages {
-    //stage('checkout') {
-      //steps {
-       // git(url: 'https://github.com/temebawit/cicd-pipeline.git', branch: 'main')
-     // }
-   // }
+    stage('checkout') {
+      steps {
+       git(url: 'https://github.com/temebawit/cicd-pipeline.git', branch: 'main')
+      }
+    }
 
 
    stage('build') {
@@ -14,12 +14,19 @@ pipeline {
       }
     }
 
-
     stage('test') {
       steps {
         sh './scripts/test.sh'
       }
     }
 
+     stage('build docker image') {
+      steps {
+        sh 'docker build -t artem_image .'
+        echo 'image was successfully built'
+      }
+    }
+
+    
   }
 }
