@@ -22,7 +22,7 @@ pipeline {
 
      stage('build docker image') {
       steps {
-        sh 'docker build -t artem_image .'
+        sh 'docker build -t tem212081/cicd-pipeline .'
         echo 'image was successfully built'
       }
     }
