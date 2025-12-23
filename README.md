@@ -1,3 +1,5 @@
 # cicd-pipeline
-For a successful build, you will need to replace the ID credits from the docker hub with your own in the last step.
-<img width="804" height="46" alt="image" src="https://github.com/user-attachments/assets/0dfd5c12-04a3-4e56-8d12-31770f83f23b" />
+For a successful build, you will need to replace the ID credits from the docker hub with your own in the LAST stage.
+
+// 'docker_hub_creds_id' —  Credentials Jenkins
+                    docker.withRegistry('https://registry.hub.docker.com', '**c7d0b75e-dfc7-4108-a4c6-b7dc0e5af483**') {
